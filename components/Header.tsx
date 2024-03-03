@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import brainwave from "@/assets/brainwave.svg";
+import brainlight from "@/assets/brainlight.svg";
 import { navigation } from "@/constants/index";
 import Button from "./Button";
 import MenuSvg from "@/assets/svg/MenuSvg";
@@ -35,8 +35,12 @@ const Header = () => {
       }`}
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-        <Link href={"#hero"} className="block w-[12rem] xl:mr-8">
-          <Image src={brainwave} width={190} height={40} alt="BrainLight" />
+        <Link
+          href={"#hero"}
+          className="w-[12rem] xl:mr-8 flex gap-3 items-center"
+        >
+          <Image src={brainlight} width={40} height={40} alt="BrainLight" />
+          <span className="text-[26px] font-black">BrainLight</span>
         </Link>
         <nav
           className={`${
@@ -49,9 +53,7 @@ const Header = () => {
                 className={`block relative font-code text-2xl uppercase text-n-1 transition hover:text-color-1 ${
                   item.onlyMobile ? "lg:hidden" : ""
                 } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
-                  item.url
-                    ? "z-2 lg:text-n-1"
-                    : "lg:text-n-1/50"
+                  item.url ? "z-2 lg:text-n-1" : "lg:text-n-1/50"
                 } lg:leading-5 lg:hover:text-n-1 xl:px-12`}
                 key={item.id}
                 href={item.url}
