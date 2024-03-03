@@ -28,7 +28,7 @@ const Benefits = () => {
                 <p className="body-2 mb-6 text-n-3">{item.text}</p>
                 <div className="flex items-center mt-auto">
                   <Image src={item.iconUrl} alt="Icon" width={48} height={48} />
-                  <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider cursor-pointer">
+                  <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
                     Explore more
                   </p>
                   <Arrow />

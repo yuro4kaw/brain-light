@@ -14,6 +14,7 @@ import { heroIcons } from "@/constants";
 import Generating from "./Generating";
 import Notification from "./Notification";
 import CompanyLogos from "./CompanyLogos";
+import { TextGenerateEffect } from "./ui/TextGenerate";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -28,14 +29,16 @@ const Hero = () => {
       <div className="container relative" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb-[6rem]">
           <h1 className="h1 mb-6">
-            Explore the Possibilities of&nbsp;AI&nbsp; Chatting with BrainLight{" "}
-            <span className="inline- relative">
+            <TextGenerateEffect words="Explore the Possibilities of&nbsp;AI&nbsp;Chatting with" />
+            {` `}
+            <span className="inline-block relative">
+              BrainLight{" "}
               <Image
                 src={curve}
-                alt="Curve"
-                className="absolute top-full left-0 w-full xl:-mt-2"
+                className="absolute top-full left-0 w-full"
                 width={624}
                 height={28}
+                alt="Curve"
               />
             </span>
           </h1>
@@ -60,7 +63,7 @@ const Hero = () => {
                   alt="AI"
                 />
                 <Generating className="absolute left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2" />
-                <ScrollParallax isAbsolutelyPositioned>
+                <ScrollParallax strength={0.11} isAbsolutelyPositioned>
                   <ul className="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl lg:flex">
                     {heroIcons.map((icon, index) => (
                       <li className="p-5" key={index}>
@@ -69,7 +72,7 @@ const Hero = () => {
                     ))}
                   </ul>
                 </ScrollParallax>
-                <ScrollParallax isAbsolutelyPositioned>
+                <ScrollParallax strength={0.11} isAbsolutelyPositioned>
                   <Notification
                     className="hidden absolute -right-[5.5rem] bottom-[11rem] w-[18rem] lg:flex"
                     title="Code Generation"

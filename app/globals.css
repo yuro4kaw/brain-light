@@ -87,3 +87,16 @@
 .-rotate-360 {
   @apply rotate-[-360deg];
 }
+
+.spin-reverse {
+  animation: spinReverse 2s linear infinite;
+}
+
+@keyframes spinReverse {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
