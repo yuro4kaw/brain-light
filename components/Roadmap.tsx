@@ -5,6 +5,7 @@ import { roadmap } from "@/constants";
 import Image from "next/image";
 import { check2, grid, loading1 } from "@/assets";
 import Tagline from "./Tagline";
+import Button from "./Button";
 
 const Roadmap = () => {
   return (
@@ -61,6 +62,9 @@ const Roadmap = () => {
               </div>
             );
           })}
+        </div>
+        <div className="flex justify-center items-center mt-12 md:mt-16">
+          <Button>Our roadmap</Button>
         </div>
       </div>
     </Section>
