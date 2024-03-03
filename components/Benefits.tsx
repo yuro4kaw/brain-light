@@ -6,10 +6,11 @@ import Image from "next/image";
 import Arrow from "@/assets/svg/Arrow";
 import { GradientLight } from "@/components/design/Benefits";
 import ClipPath from "@/assets/svg/ClipPath";
+import { Meteors } from "./ui/Meteors";
 
 const Benefits = () => {
   return (
-    <Section>
+    <Section id="features">
       <div className="container relative z-2">
         <Heading
           className="md:max-w-md lg:max-w-2xl"
@@ -27,7 +28,7 @@ const Benefits = () => {
                 <p className="body-2 mb-6 text-n-3">{item.text}</p>
                 <div className="flex items-center mt-auto">
                   <Image src={item.iconUrl} alt="Icon" width={48} height={48} />
-                  <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
+                  <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider cursor-pointer">
                     Explore more
                   </p>
                   <Arrow />
@@ -35,10 +36,11 @@ const Benefits = () => {
               </div>
               {item.light && <GradientLight />}
               <div
-                className="absolute inset-0.5 bg-n-8"
+                className="group absolute inset-0.5 bg-n-8"
                 style={{ clipPath: "url(#benefits)" }}
               >
-                <div className="absolute inset-0 opacity-0  transition-opacity hover:opacity-10">
+                <Meteors className="transition group-hover:hidden" />
+                <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-10">
                   {item.imageUrl && (
                     <Image
                       src={item.imageUrl}

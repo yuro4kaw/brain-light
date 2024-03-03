@@ -1,11 +1,13 @@
+"use client";
 import React from "react";
 import Section from "./Section";
 import Image from "next/image";
-import { smallSphere, stars } from "@/assets";
+import { smallSphere } from "@/assets";
 import Heading from "./Heading";
 import PricingList from "./PricingList";
-import { LeftLine, RightLine,  } from "@/components/design/Pricing";
+import { LeftLine, RightLine } from "@/components/design/Pricing";
 import Link from "next/link";
+import { BackgroundCircles } from "./design/Hero";
 
 const Pricing = () => {
   return (
@@ -20,13 +22,7 @@ const Pricing = () => {
             alt="Sphere"
           />
           <div className="absolute top-1/2 left-1/2 w-[60rem] -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-            <Image
-              src={stars}
-              className="w-full"
-              width={950}
-              height={400}
-              alt="Start"
-            />
+            <BackgroundCircles />
           </div>
         </div>
         <Heading
@@ -39,7 +35,12 @@ const Pricing = () => {
           <RightLine />
         </div>
         <div className="flex justify-center mt-10">
-            <Link href="/pricing" className="text-xs font-code font-semibold tracking-wider uppercase border-b">See the full details</Link>
+          <Link
+            href="/pricing"
+            className="text-xs font-code font-semibold tracking-wider uppercase border-b"
+          >
+            See the full details
+          </Link>
         </div>
       </div>
     </Section>
