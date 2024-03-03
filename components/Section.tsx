@@ -2,11 +2,11 @@ import React from "react";
 import SectionSvg from "@/assets/svg/SectionSvg";
 
 type Props = {
-  className: string;
-  id: any;
-  crosses: any;
-  crossesOffset: any;
-  customPadding: any;
+  className?: string;
+  id?: any;
+  crosses?: any;
+  crossesOffset?: any;
+  customPadding?: any;
   children: any;
 };
 
