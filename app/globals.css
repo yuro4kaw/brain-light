@@ -11,7 +11,20 @@
   --font-code: "Source Code Pro", monospace;
   --font-grotesk: "Space Grotesk", sans-serif;
   color-scheme: dark;
-  
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #AC6AFF;
+  border-radius: 12px;
+}
+
+
+::-webkit-scrollbar-track {
+  background-color: #15131D;
 }
 
 * {
@@ -96,6 +109,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(-360deg);
   }
